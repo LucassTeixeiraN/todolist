@@ -1,10 +1,14 @@
+import Task from "./components/Task/Task"
+
 import "./App.css"
 
 export default function App() {
 
     return(
         <>
-            oi
+            <div className="tasks">
+                <Task/>
+            </div>
         </>
     )
 }

@@ -1,0 +1,38 @@
+
+.task-container {
+    background-color: rgb(214, 207, 146);
+    width: 20rem;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 10px 5px rgba(143, 139, 95, 0.743);
+    border: 1px solid rgba(98, 95, 65, 0.243);
+    display: grid
+}
+
+.task-container:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: none;
+}
+
+.upper-content {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.delete-btn {
+    width: 35px;
+    height: 35px;
+    background-color:transparent;
+    border: none;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}
+
+.delete-btn svg {
+    width: 30px;
+    height: 30px;
+}
