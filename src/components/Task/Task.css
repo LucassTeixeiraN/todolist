@@ -6,7 +6,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: -3px 3px 10px 5px rgba(143, 139, 95, 0.743);
-    border: 1px solid rgba(98, 95, 65, 0.243);
+    border: 1px solid #625f413e;
     display: grid
 }
 

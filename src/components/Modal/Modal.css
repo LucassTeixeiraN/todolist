@@ -1,0 +1,105 @@
+.modal-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal {
+    background-color: rgb(214, 207, 146);
+    width: 60vw;
+    height: 50vh;
+    box-shadow: -3px 3px 10px 5px rgba(143, 139, 95, 0.743);
+    border: 2px solid #625f413e;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    color: #625f46;
+}
+
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #625f46;
+    outline: 0;
+    font-size: 17px;
+    color: #625f46;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 20px;
+    color: #625f46;
+    pointer-events: none;
+    font-weight: bold;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .modal-btn {
+    border: 2px solid #625f46;
+    background-color: rgb(214, 207, 146);
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 10em;
+    border-radius: 1rem;
+    color: #625f46;
+    cursor: pointer;
+    justify-self: center;
+   }
+   
+   .modal-btn:hover:not(:disabled) {
+    background-color: #625f46;
+    color: rgb(214, 207, 146);
+
+   }
