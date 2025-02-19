@@ -36,3 +36,26 @@
     width: 30px;
     height: 30px;
 }
+
+.upper-content {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.upper-content p {
+    height: 5px;
+    padding: 5px 0;
+    font-weight: bold;
+    color: #625f46;
+}
+
+.bottom-content {
+    width: 100%;
+}
+
+.task-text {
+    width: 100%;
+    word-break: break-all;
+    text-align: center;
+}

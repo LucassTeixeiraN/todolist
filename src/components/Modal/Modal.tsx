@@ -1,10 +1,5 @@
 import { useState } from "react"
 import "./Modal.css"
-type Task = {
-    id: number;
-    text: string;
-    priority: string;
-}
 
 interface ModalInteface {
     text: string,
@@ -40,6 +35,7 @@ export default function Modal( {text, input, btnText, newTaskHandle, changeModal
                     <div className="priority-input">
                         <label className="priority-input-label">Prioridade: </label> 
                         <input onChange={(e) => setPriority(e.target.value)} id="myRange" className="slider" step={1} max={3} min={1} type="range" />
+                        {/* <input onChange={(e) => console.log(e.target.value)} id="myRange" className="slider" step={1} max={3} min={1} type="range" /> */}
                         <div className="priority-label">
                             <p>Baixa</p>
                             <p>Média</p>

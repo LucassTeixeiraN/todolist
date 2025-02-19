@@ -10,12 +10,10 @@ export default function App() {
     type Task = {
         id: number;
         text: string;
-        priority: string;
+        priority: number;
     }
 
     const [modalHandle, setModalHandle] = useState(false)
-    const [newTask, setNewTask] = useState("")
-    const [tasksAmount, setTasksAmount] = useState(0)
     const [currentTaskId, setCurrentTaskId] = useState(0)
     const [tasks, setTasks] = useState<Task[]>([])
 
@@ -32,11 +30,19 @@ export default function App() {
         }
     }
 
+    const deleteTask = (id: number) => {
+        for(const task of tasks) {
+            if(task.id == id) {
+                setTasks(prevTasks => prevTasks.filter(t => t.id !== task.id))
+            }
+        }
+    } 
+
     const newTaskHandle = (task: Task) => {
         setTasks(prevTasks => [...prevTasks, task])
     }
 
-    const task = tasks.map((el) => <Task task = {el}/>)
+    const task = tasks.map((el) => <Task key={currentTaskId} task = {el} deleteTask={deleteTask}/>)
 
     useEffect(()=> {
         task
