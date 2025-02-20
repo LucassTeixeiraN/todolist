@@ -42,20 +42,21 @@ export default function App() {
         setTasks(prevTasks => [...prevTasks, task])
     }
 
-    const task = tasks.map((el) => <Task key={currentTaskId} task = {el} deleteTask={deleteTask}/>)
+    const task = tasks.map((el) => <Task key={el.id} task = {el} deleteTask={deleteTask}/>)
 
     useEffect(()=> {
         task
+        console.log(tasks);
+        
     }, [tasks])
 
     return(
         <>
+            <AddBtn changeModal={changeModal}/>
             <div className="tasks">
-                <AddBtn changeModal={changeModal}/>
-                {task}
-                {modalHandle && <Modal text={"Criar Tarefa"} input={true} btnText="Criar" newTaskHandle={newTaskHandle} changeModal={changeModal} currentTaskId={currentTaskId} idHandle= {idHandle}/>}
-
+                    {task}
             </div>
+            {modalHandle && <Modal text={"Criar Tarefa"} input={true} btnText="Criar" newTaskHandle={newTaskHandle} changeModal={changeModal} currentTaskId={currentTaskId} idHandle= {idHandle}/>}
         </>
     )
 }
